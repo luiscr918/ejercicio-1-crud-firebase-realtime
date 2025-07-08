@@ -46,6 +46,7 @@ export const CreateScreen = () => {
         onChangeText={(texto) => setStock(parseInt(texto))}
         style={styles.input}
       />
+      <Text>Precio con descuento:</Text>
       <TextInput readOnly style={styles.input} value={descuento.toString()} />
       <Button title="Guardar" onPress={calcular} />
     </View>
