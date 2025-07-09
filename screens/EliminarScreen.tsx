@@ -10,23 +10,49 @@ export const EliminarScreen = () => {
     Alert.alert("Exito", "se eliminó correctamente");
   };
   return (
-    <View>
-      <Text>EliminarScreen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Eliminar Producto</Text>
       <TextInput
         placeholder="Ingresar nombre"
         onChangeText={(texto) => setnombre(texto)}
         style={styles.input}
+        value={nombre}
+        placeholderTextColor="#888"
       />
-      <Button title="Eliminar" onPress={eliminar} />
+      <View style={styles.buttonContainer}>
+        <Button title="Eliminar" onPress={eliminar} color="#F44336" />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#F5F5F5",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    marginBottom: 24,
+    color: "#333",
+  },
   input: {
-    fontSize: 25,
-    backgroundColor: "#9999",
-    margin: 6,
+    fontSize: 20,
+    backgroundColor: "#FFF",
+    marginVertical: 8,
     width: "80%",
+    borderRadius: 8,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: "#CCC",
+    color: "#222",
+  },
+  buttonContainer: {
+    width: "80%",
+    marginTop: 20,
   },
 });
